@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "755189938867",
+    "project_id": "let-schat-99db5",
+    "storage_bucket": "let-schat-99db5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755189938867:android:4a33ea53568475905d8ec6",
+        "android_client_info": {
+          "package_name": "com.example.ChatApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755189938867-lemjoqufa4samu6jnqab4h1t5caq552p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7UHSPxJNXI4Khx7DHEAir2hBw-a0DbLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755189938867-lemjoqufa4samu6jnqab4h1t5caq552p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755189938867-tu1jtrtru5hjhtdsm53oj8emt5kp6hfg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755189938867:android:b7bfbe71409b97785d8ec6",
+        "android_client_info": {
+          "package_name": "com.example.letschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755189938867-m3dbr32ek8fn7qg72g1fibkhbvq7pnn6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.letschat",
+            "certificate_hash": "a8d146cdf37c91ce10d5c640ef6a92a1244ed6e7"
+          }
+        },
+        {
+          "client_id": "755189938867-lemjoqufa4samu6jnqab4h1t5caq552p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7UHSPxJNXI4Khx7DHEAir2hBw-a0DbLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755189938867-lemjoqufa4samu6jnqab4h1t5caq552p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755189938867-tu1jtrtru5hjhtdsm53oj8emt5kp6hfg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

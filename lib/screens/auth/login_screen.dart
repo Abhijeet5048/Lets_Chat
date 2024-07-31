@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
         } else {
           await APIs.createUser().then((value) {
             Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+                context, MaterialPageRoute(builder: (_) => const HomeScreen()));
           });
         }
       }
@@ -72,7 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
     } catch (e) {
       // log('\n_signInWithGoogle: $e');
       // ignore: use_build_context_synchronously
-      Dialogs.showSnackbar(context, 'Internet on kr le bhai!');
+      if (mounted) {
+        Dialogs.showSnackbar(context, 'Internet on kr le bhai!');
+      }
       return null;
     }
   }

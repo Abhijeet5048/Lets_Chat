@@ -181,7 +181,7 @@ class _MessageCardState extends State<MessageCard> {
                 margin: EdgeInsets.symmetric(
                     vertical: mq.height * .015, horizontal: mq.width * .4),
                 decoration: BoxDecoration(
-                    color: Colors.grey, borderRadius: BorderRadius.circular(8)),
+                    color: Colors.red, borderRadius: BorderRadius.circular(8)),
               ),
               //pick profile picture label
               // const Text('Pick Profile Picture',
@@ -221,13 +221,12 @@ class _MessageCardState extends State<MessageCard> {
                           await GallerySaver.saveImage(widget.message.msg,
                                   albumName: 'Lets Chat')
                               .then((success) {
-                            
-                              log('Image is saved');
-                              Navigator.pop(context);
-                              if (success != null && success) {
-                                Dialogs.showSnackbar(
-                                    context, 'Image Successfully Saved');
-                              }
+                            log('Image is saved');
+                            Navigator.pop(context);
+                            if (success != null && success) {
+                              Dialogs.showSnackbar(
+                                  context, 'Image Successfully Saved');
+                            }
                           });
                         } catch (e) {
                           print('ErrorWhileSavingImg: $e');
@@ -248,8 +247,9 @@ class _MessageCardState extends State<MessageCard> {
                     icon: const Icon(Icons.edit, color: Colors.blue, size: 26),
                     name: 'Edit Message',
                     onTap: () {
+                      print('Working');
                       Navigator.pop(context);
-                      _showMessageUpdateDialog();
+                      // _showMessageUpdateDialog();
                     }),
 
               //delete option
@@ -259,7 +259,7 @@ class _MessageCardState extends State<MessageCard> {
                         color: Colors.red, size: 26),
                     name: 'Delete Message',
                     onTap: () async {
-                      await APIs.deleteMessage(widget.message).then((value) {
+                      APIs.deleteMessage(widget.message).then((value) {
                         //For hiding Bottom sheet
                         Navigator.pop(context);
                       });

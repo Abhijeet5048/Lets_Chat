@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:developer';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/cupertino.dart';
@@ -175,7 +174,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                     ),
                     //for adding some space
-                    const SizedBox(width: 10),
+                    const SizedBox(width: 8),
 
                     // user name and last seen
                     Column(
@@ -234,7 +233,9 @@ class _ChatScreenState extends State<ChatScreen> {
                   IconButton(
                       onPressed: () {
                         FocusScope.of(context).unfocus();
-                        setState(() => _showEmoji = !_showEmoji);
+                        if(mounted) {
+                          setState(() => _showEmoji = !_showEmoji);
+                        }
                       },
                       icon: const Icon(Icons.emoji_emotions_outlined,
                           color: Colors.blueAccent, size: 25)),

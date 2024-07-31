@@ -77,6 +77,9 @@ class _HomeScreenState extends State<HomeScreen> {
           } else {
             Navigator.of(context).pop();
           }
+          // some delay before pop
+          Future.delayed(
+              const Duration(milliseconds: 300), SystemNavigator.pop);
         },
         child: Scaffold(
           // app bar
@@ -151,12 +154,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 // if data is loading
                 case ConnectionState.waiting:
                 case ConnectionState.none:
-                  return const Center(child: CircularProgressIndicator());
+                  // return const Center(child: CircularProgressIndicator());
                 // if some or all data is loaded the show it
                 case ConnectionState.active:
                 case ConnectionState.done:
                   return StreamBuilder(
-
                     stream: APIs.getAllUsers(
                         snapshot.data?.docs.map((e) => e.id).toList() ?? []),
                     builder: (context, snapshot) {
@@ -235,11 +237,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   maxLines: null,
                   onChanged: (value) => email = value,
                   decoration: InputDecoration(
-                      hintText: 'Enter Email Id of your friend',
+                      hintText: 'Enter Email Id',
                       prefixIcon: const Icon(Icons.email, color: Colors.blue),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15)))),
               actions: [
+                // Add button
                 MaterialButton(
                     onPressed: () async {
                       Navigator.pop(context);
@@ -252,13 +255,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         });
                       }
                     },
-                    child: const Text('Cancel',
+                    child: const Text('Add',
                         style: TextStyle(color: Colors.blue, fontSize: 16))),
+                
+                //Cancel button
                 MaterialButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: const Text('Add',
+                    child: const Text('Cancel',
                         style: TextStyle(color: Colors.blue, fontSize: 16))),
               ],
             ));
